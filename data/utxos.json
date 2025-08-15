@@ -1,0 +1,14 @@
+[
+  {
+    "txid": "b6ac31ac4405fe9c20add729e391ec300c5bafe8f12c536a65c86c3c68389fb1",
+    "index": 0,
+    "amount": 50,
+    "address": "miner1"
+  },
+  {
+    "txid": "b4050260d9fc1a96f1e0871b16a76f5699cb3762ad1977968c3aa0fe320b3daa",
+    "index": 0,
+    "amount": 50,
+    "address": "miner1"
+  }
+]

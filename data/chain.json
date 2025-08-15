@@ -1,0 +1,60 @@
+[
+  {
+    "index": 0,
+    "transactions": [],
+    "timestamp": 1755056274.9286115,
+    "previous_hash": "0",
+    "nonce": 0,
+    "hash": "5ae0ac12d011be9737f8178330f8736b9d3881d4e7fbe63f3caeb904bbaa396b"
+  },
+  {
+    "index": 1,
+    "transactions": [
+      {
+        "txid": "b6ac31ac4405fe9c20add729e391ec300c5bafe8f12c536a65c86c3c68389fb1",
+        "inputs": [
+          {
+            "txid": "COINBASE",
+            "index": 1,
+            "address": "COINBASE"
+          }
+        ],
+        "outputs": [
+          {
+            "amount": 50,
+            "address": "miner1"
+          }
+        ]
+      }
+    ],
+    "timestamp": 1755056291.274969,
+    "previous_hash": "5ae0ac12d011be9737f8178330f8736b9d3881d4e7fbe63f3caeb904bbaa396b",
+    "nonce": 7031,
+    "hash": "864d83fa736c0e6c40bb68cea014bf6b8c17d8393bb9bcd4e42d7d1ec04608a9"
+  },
+  {
+    "index": 2,
+    "transactions": [
+      {
+        "txid": "b4050260d9fc1a96f1e0871b16a76f5699cb3762ad1977968c3aa0fe320b3daa",
+        "inputs": [
+          {
+            "txid": "COINBASE",
+            "index": 2,
+            "address": "COINBASE"
+          }
+        ],
+        "outputs": [
+          {
+            "amount": 50,
+            "address": "miner1"
+          }
+        ]
+      }
+    ],
+    "timestamp": 1755056322.7587461,
+    "previous_hash": "864d83fa736c0e6c40bb68cea014bf6b8c17d8393bb9bcd4e42d7d1ec04608a9",
+    "nonce": 1319,
+    "hash": "e154e663248e629fc849c1b4199f164c96a22673a04ac235e7b80d437f4a975a"
+  }
+]
