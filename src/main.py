@@ -67,7 +67,7 @@ def main():
     print("Chain valid?", bc.is_chain_valid())
     print_balances(bc, ["miner1", "bob"])
 
-    # persist
+    # file persist (JSON)
     bc.save_to_file(CHAIN_PATH, UTXO_PATH)
     print("Saved to", CHAIN_PATH, "and", UTXO_PATH)
 

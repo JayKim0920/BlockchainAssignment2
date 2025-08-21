@@ -1,14 +1,14 @@
 [
   {
-    "txid": "b6ac31ac4405fe9c20add729e391ec300c5bafe8f12c536a65c86c3c68389fb1",
+    "txid": "b4050260d9fc1a96f1e0871b16a76f5699cb3762ad1977968c3aa0fe320b3daa",
     "index": 0,
     "amount": 50,
     "address": "miner1"
   },
   {
-    "txid": "b4050260d9fc1a96f1e0871b16a76f5699cb3762ad1977968c3aa0fe320b3daa",
+    "txid": "5da1cbe7ed83cbc33c8e39dbc0b25d12c6e698506e1e9f70a532344e5f057241",
     "index": 0,
     "amount": 50,
-    "address": "miner1"
+    "address": "bob"
   }
 ]

@@ -1,6 +1,6 @@
 # src/blockchain.py
 """
-Assignment 2 helper implementation (Python): Block structure + Chain integrity + Transaction handling + Double-spend prevention (UTXO)
+Assignment 2 implementation (Python): Block structure + Chain integrity + Transaction handling + Double-spend prevention (UTXO)
 - Block: index, timestamp, transactions, previous_hash, nonce, hash
 - Transactions: UTXO-style inputs/outputs; txid = sha256 of canonical JSON
 - Chain integrity: SHA-256, previous_hash linkage, PoW (configurable difficulty)
@@ -52,7 +52,7 @@ class Block:
     def __init__(self, index: int, transactions: List[Dict[str, Any]], timestamp: float,
                  previous_hash: str, nonce: int = 0):
         self.index = index
-        self.transactions = transactions  # list of tx dicts
+        self.transactions = transactions  # list of transaction dictionaries
         self.timestamp = timestamp
         self.previous_hash = previous_hash
         self.nonce = nonce
@@ -83,7 +83,7 @@ class Blockchain:
     def __init__(self, difficulty: int = 3, block_reward: int = 50):
         self.unconfirmed_transactions: List[Dict[str, Any]] = []  # mempool (dict form)
         self.chain: List[Block] = []
-        # UTXO set: key (txid, idx) -> {"amount": int, "address": str}
+        # UTXO set: key (transaction id, idx) -> {"amount": int, "address": str}
         self.utxos: Dict[Tuple[str, int], Dict[str, Any]] = {}
         self.difficulty = difficulty
         self.block_reward = block_reward
@@ -104,7 +104,7 @@ class Blockchain:
 
     def add_new_transaction(self, tx: Dict[str, Any]) -> bool:
         """
-        Add a new tx dict to mempool if valid against current UTXO and mempool (no double-use).
+        Add a new transaction dictionary to mempool if valid against current UTXO and mempool (no double-spending!).
         """
         # Recreate obj for validation
         try:
@@ -181,6 +181,7 @@ class Blockchain:
         while not h.startswith(target):
             block.nonce += 1
             h = block.compute_hash()
+        block.hash = h
         return h
 
     def is_valid_proof(self, block: Block, block_hash: str) -> bool:
@@ -191,6 +192,7 @@ class Blockchain:
             return False
         if not self.is_valid_proof(block, proof):
             return False
+        block.hash = proof
         temp_utxo = self._clone_utxo()
         for txd in block.transactions:
             tx = Transaction(txd["inputs"], txd["outputs"])
