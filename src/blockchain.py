@@ -181,7 +181,7 @@ class Blockchain:
         while not h.startswith(target):
             block.nonce += 1
             h = block.compute_hash()
-        block.hash = h
+        block.hash = h #imply final hash to block
         return h
 
     def is_valid_proof(self, block: Block, block_hash: str) -> bool:
@@ -192,7 +192,7 @@ class Blockchain:
             return False
         if not self.is_valid_proof(block, proof):
             return False
-        block.hash = proof
+        block.hash = proof #set hash to proof before appending to chain.
         temp_utxo = self._clone_utxo()
         for txd in block.transactions:
             tx = Transaction(txd["inputs"], txd["outputs"])
@@ -251,7 +251,7 @@ class Blockchain:
                 continue
             prev = self.chain[i - 1]
             # ---- timestamp check in ascending order ----
-            if b.timestamp <= prev.timestamp:
+            if b.timestamp < prev.timestamp:
                 return False
             # ------------------------------------
             if b.previous_hash != prev.hash:

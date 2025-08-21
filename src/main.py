@@ -38,7 +38,7 @@ def main():
     print("Chain valid?", bc.is_chain_valid())
     print_balances(bc, ["miner1", "bob"])
 
-    # create a tx spending miner1's UTXO to bob
+    # create a transaction spending miner1's UTXO to bob
     spendables = find_spendable_utxos(bc, "miner1")
     assert spendables, "no utxo for miner1"
     (txid, idx), utxo = spendables[0]
@@ -71,7 +71,7 @@ def main():
     bc.save_to_file(CHAIN_PATH, UTXO_PATH)
     print("Saved to", CHAIN_PATH, "and", UTXO_PATH)
 
-    # Tamper test: modify amount in block 1 tx (if exists) and re-check validity
+    # Tamper test: modify amount in block 1 transaction (if exists) and re-check validity
     if len(bc.chain) > 1 and bc.chain[1].transactions:
         print("Tampering with block 1...")
         bc.chain[1].transactions[0]["outputs"][0]["amount"] = 9999
