@@ -1,17 +1,35 @@
 [
   {
     "index": 0,
-    "transactions": [],
-    "timestamp": 1755748340.2649078,
+    "transactions": [
+      {
+        "txid": "0a7ea696bb61674432f5f2e205f124fc21ea9653b8bf2c5ca894ad5e2f36b787",
+        "inputs": [
+          {
+            "txid": "COINBASE",
+            "index": 0,
+            "address": "COINBASE"
+          }
+        ],
+        "outputs": [
+          {
+            "amount": 50,
+            "address": "alice"
+          }
+        ]
+      }
+    ],
+    "timestamp": 1755778049.8787453,
     "previous_hash": "0",
-    "nonce": 0,
-    "hash": "286fb0b2f2a46b742e642e513a55bcaa743ccd373d1f6ca01f6063a1f57d8720"
+    "nonce": 6967,
+    "hash": null,
+    "difficulty": 3
   },
   {
     "index": 1,
     "transactions": [
       {
-        "txid": "b6ac31ac4405fe9c20add729e391ec300c5bafe8f12c536a65c86c3c68389fb1",
+        "txid": "7173dcb129015cf7b642d97b575ea47edb0946fa7f1e2d492441e9e918399705",
         "inputs": [
           {
             "txid": "COINBASE",
@@ -22,55 +40,15 @@
         "outputs": [
           {
             "amount": 50,
-            "address": "miner1"
+            "address": "alice"
           }
         ]
       }
     ],
-    "timestamp": 1755748340.2649078,
-    "previous_hash": "286fb0b2f2a46b742e642e513a55bcaa743ccd373d1f6ca01f6063a1f57d8720",
-    "nonce": 1320,
-    "hash": "000d94df59e701a05b28b6a95f9121475f78779b00b9f51c2adce991bc5f7770"
-  },
-  {
-    "index": 2,
-    "transactions": [
-      {
-        "txid": "b4050260d9fc1a96f1e0871b16a76f5699cb3762ad1977968c3aa0fe320b3daa",
-        "inputs": [
-          {
-            "txid": "COINBASE",
-            "index": 2,
-            "address": "COINBASE"
-          }
-        ],
-        "outputs": [
-          {
-            "amount": 50,
-            "address": "miner1"
-          }
-        ]
-      },
-      {
-        "txid": "5da1cbe7ed83cbc33c8e39dbc0b25d12c6e698506e1e9f70a532344e5f057241",
-        "inputs": [
-          {
-            "txid": "b6ac31ac4405fe9c20add729e391ec300c5bafe8f12c536a65c86c3c68389fb1",
-            "index": 0,
-            "address": "miner1"
-          }
-        ],
-        "outputs": [
-          {
-            "amount": 50,
-            "address": "bob"
-          }
-        ]
-      }
-    ],
-    "timestamp": 1755748340.2775433,
-    "previous_hash": "000d94df59e701a05b28b6a95f9121475f78779b00b9f51c2adce991bc5f7770",
-    "nonce": 2619,
-    "hash": "000e40258b70c86b3249eb54dabc8ca47f22ae715158ce181e796af6f9874f6c"
+    "timestamp": 1755778051.710179,
+    "previous_hash": null,
+    "nonce": 10113,
+    "hash": null,
+    "difficulty": 3
   }
 ]

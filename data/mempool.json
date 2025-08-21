@@ -1,0 +1,22 @@
+[
+  {
+    "txid": "3c9b57781389abbc9d104479009b4f2f8f949294fa8d70e0e039d765f9466d25",
+    "inputs": [
+      {
+        "txid": "0a7ea696bb61674432f5f2e205f124fc21ea9653b8bf2c5ca894ad5e2f36b787",
+        "index": 0,
+        "address": "alice"
+      }
+    ],
+    "outputs": [
+      {
+        "amount": 10,
+        "address": "bob"
+      },
+      {
+        "amount": 40,
+        "address": "alice"
+      }
+    ]
+  }
+]
